@@ -1,0 +1,101 @@
+[2026-04-02 17:53:33.830] [INFO    ] [logger.py:232                 ] Logging system initialized | taskName=None log_file=/testbed/codereviewer_tool/gitlab-opencode-reviewer/logs/app.log log_levels={'console': 'INFO', 'file': 'DEBUG'}
+[2026-04-02 17:53:33.832] [INFO    ] [<string>:14                   ] Main application started | taskName=None
+[2026-04-02 17:53:33.832] [INFO    ] [<string>:15                   ] GitLab client initialized | taskName=None
+[2026-04-02 17:53:33.832] [INFO    ] [<string>:16                   ] Opencode wrapper ready | taskName=None
+[2026-04-02 17:53:33.832] [DEBUG   ] [<string>:17                   ] Debug message from main | taskName=None
+[2026-04-02 17:53:33.832] [WARNING ] [<string>:18                   ] Warning from gitlab | taskName=None
+[2026-04-02 17:53:39.210] [INFO    ] [<string>:1                    ] ✓ Logger works | taskName=None
+[2026-04-02 17:56:16.352] [INFO    ] [logger.py:232                 ] Logging system initialized | taskName=None log_file=/testbed/codereviewer_tool/gitlab-opencode-reviewer/logs/app.log log_levels={'console': 'INFO', 'file': 'DEBUG'}
+[2026-04-02 17:56:16.373] [INFO    ] [main.py:383                   ] Starting server on 0.0.0.0:8000 | taskName=None
+[2026-04-02 17:56:16.398] [INFO    ] [main.py:41                    ] ============================================================ | taskName=Task-2
+[2026-04-02 17:56:16.398] [INFO    ] [main.py:42                    ] GitLab Opencode Reviewer Starting | taskName=Task-2
+[2026-04-02 17:56:16.398] [INFO    ] [main.py:43                    ] ============================================================ | taskName=Task-2
+[2026-04-02 17:56:16.398] [INFO    ] [main.py:44                    ] Configuration: {'host': '0.0.0.0', 'port': 8000, 'gitlab_url': 'https://gitlab.com', 'gitlab_configured': True, 'simulation_mode': True, 'opencode_model': 'opencode/big-pickle', 'opencode_timeout': 300, 'max_file_size_kb': 500, 'temp_dir': '/tmp/gitlab-reviewer', 'log_level': 'INFO', 'agent_task_max_retries': 2, 'agent_task_retry_delay_seconds': 5, 'agent_task_retry_on_timeout': True, 'agent_task_retry_on_error': True} | taskName=Task-2
+[2026-04-02 17:56:16.399] [INFO    ] [main.py:53                    ] Configuration validated successfully | taskName=Task-2
+[2026-04-02 17:56:18.283] [INFO    ] [logger.py:232                 ] Logging system initialized | taskName=None log_file=/testbed/codereviewer_tool/gitlab-opencode-reviewer/logs/app.log log_levels={'console': 'INFO', 'file': 'DEBUG'}
+[2026-04-02 17:56:19.029] [INFO    ] [mock_gitlab_server.py:32      ] Mock GitLab initialized. Target: 1 | taskName=None
+[2026-04-02 17:56:19.031] [ERROR   ] [mock_gitlab_server.py:171     ] Cannot connect to reviewer server: Invalid URL '1/health': No scheme supplied. Perhaps you meant https://1/health? | taskName=None
+[2026-04-02 17:56:20.489] [INFO    ] [logger.py:232                 ] Logging system initialized | taskName=None log_file=/testbed/codereviewer_tool/gitlab-opencode-reviewer/logs/app.log log_levels={'console': 'INFO', 'file': 'DEBUG'}
+[2026-04-02 17:56:21.078] [INFO    ] [mock_gitlab_server.py:32      ] Mock GitLab initialized. Target: http://localhost:8000 | taskName=None
+[2026-04-02 17:56:21.092] [INFO    ] [mock_gitlab_server.py:168     ] Reviewer server is healthy: {'status': 'healthy', 'reviews_in_progress': 0, 'reviews_completed': 0, 'reviews_failed': 0} | taskName=None
+[2026-04-02 17:56:23.826] [INFO    ] [mock_gitlab_server.py:44      ] Sending Merge Request Hook webhook to http://localhost:8000/webhook | taskName=None
+[2026-04-02 17:56:23.827] [DEBUG   ] [mock_gitlab_server.py:45      ] Payload: {
+  "object_kind": "merge_request",
+  "event_type": "merge_request",
+  "project": {
+    "id": 1,
+    "name": "Test Project",
+    "web_url": "https://gitlab.com/test/project"
+  },
+  "object_attributes": {
+    "id": 1,
+    "iid": 1,
+    "target_project_id": 1,
+    "source_project_id": 1,
+    "title": "Add new feature",
+    "description": "This MR adds a new feature",
+    "state": "opened",
+    "action": "open",
+    "source_branch": "feature/test",
+    "target_branch": "main",
+    "source": {
+      "git_http_url": "https://gitlab.com/test/project.git"
+    },
+    "author_id": 1
+  },
+  "author": {
+    "id": 1,
+    "name": "Test User",
+    "username": "testuser"
+  }
+} | taskName=None
+[2026-04-02 17:56:23.832] [INFO    ] [logger.py:222                 ] FLOW: webhook_received | taskName=Task-4 flow_step=webhook_received flow_remote_addr=127.0.0.1
+[2026-04-02 17:56:23.834] [INFO    ] [main.py:306                   ] Webhook received: Merge Request Hook / merge_request | taskName=Task-4
+[2026-04-02 17:56:23.834] [INFO    ] [main.py:316                   ] Triggering review for MR !1 (action: open) | taskName=Task-4
+[2026-04-02 17:56:23.834] [INFO    ] [logger.py:222                 ] FLOW: review_workflow_start | taskName=Task-4 flow_step=review_workflow_start flow_project_id=1 flow_mr_iid=1 flow_use_mock=False
+[2026-04-02 17:56:23.834] [INFO    ] [opencode_wrapper.py:826       ] Repository cloner initialized with temp dir: /tmp/gitlab-reviewer | taskName=Task-4
+[2026-04-02 17:56:23.834] [INFO    ] [main.py:152                   ] Running in SIMULATION MODE - using local sample_project | taskName=Task-4
+[2026-04-02 17:56:23.834] [INFO    ] [gitlab_client.py:234          ] Using MockGitLabClient with repo: /testbed/codereviewer_tool/gitlab-opencode-reviewer/sample_project | taskName=Task-4
+[2026-04-02 17:56:23.834] [INFO    ] [main.py:158                   ] Step 1: Fetching MR info... | taskName=Task-4
+[2026-04-02 17:56:23.835] [INFO    ] [logger.py:222                 ] FLOW: mock_fetch_mr | taskName=Task-4 flow_step=mock_fetch_mr flow_project_id=1 flow_mr_iid=1
+[2026-04-02 17:56:23.835] [INFO    ] [main.py:162                   ] Step 2: Fetching MR changes... | taskName=Task-4
+[2026-04-02 17:56:23.835] [INFO    ] [logger.py:222                 ] FLOW: mock_fetch_changes | taskName=Task-4 flow_step=mock_fetch_changes flow_project_id=1 flow_mr_iid=1
+[2026-04-02 17:56:23.835] [INFO    ] [logger.py:222                 ] FLOW: changes_filtered | taskName=Task-4 flow_step=changes_filtered flow_total_changes=1 flow_code_changes=1 flow_skipped=0
+[2026-04-02 17:56:23.835] [INFO    ] [main.py:182                   ] Step 3: Using mock repository at: /testbed/codereviewer_tool/gitlab-opencode-reviewer/sample_project | taskName=Task-4
+[2026-04-02 17:56:23.835] [INFO    ] [main.py:193                   ] Step 4: Initializing opencode reviewer... | taskName=Task-4
+[2026-04-02 17:56:23.835] [INFO    ] [opencode_wrapper.py:599       ] Loaded review rules from: /testbed/codereviewer_tool/gitlab-opencode-reviewer/sample_project/agent/rules/CODE_REVIEW.md | taskName=Task-4
+[2026-04-02 17:56:23.835] [INFO    ] [logger.py:222                 ] FLOW: reviewer_init | taskName=Task-4 flow_step=reviewer_init flow_repo_path=/testbed/codereviewer_tool/gitlab-opencode-reviewer/sample_project flow_model=opencode/big-pickle flow_has_rules=True flow_issue_key=MR-1 flow_use_retry=False
+[2026-04-02 17:56:23.835] [INFO    ] [main.py:198                   ] Step 5: Reviewing 1 files... | taskName=Task-4
+[2026-04-02 17:56:23.835] [INFO    ] [main.py:202                   ] Reviewing file 1/1: src/example.py | taskName=Task-4
+[2026-04-02 17:56:23.837] [INFO    ] [logger.py:222                 ] FLOW: review_file_start | taskName=Task-5 flow_step=review_file_start flow_file_path=src/example.py flow_diff_lines=56 flow_has_full_content=True flow_issue_key=MR-1
+[2026-04-02 17:56:25.589] [INFO    ] [opencode_wrapper.py:246       ] Starting agent task task_6b9a0eb8 | taskName=Task-5 cmd=opencode run --agent build --model... timeout=300 model=opencode/big-pickle session_file=/tmp/gitlab-reviewer/sessions/MR-1_20260402_175625_0.log attempt_number=0
+[2026-04-02 17:56:33.087] [DEBUG   ] [opencode_wrapper.py:319       ] No output for 5.0s, considering stream complete | taskName=Task-7
+[2026-04-02 17:56:49.910] [DEBUG   ] [opencode_wrapper.py:319       ] No output for 5.0s, considering stream complete | taskName=Task-6
+[2026-04-02 17:57:19.940] [WARNING ] [opencode_wrapper.py:360       ] Process didn't exit gracefully after output completed, terminating... | taskName=Task-5
+[2026-04-02 17:57:19.985] [INFO    ] [opencode_wrapper.py:409       ] Agent task task_6b9a0eb8 completed with returncode -15 | taskName=Task-5
+[2026-04-02 17:57:19.985] [INFO    ] [opencode_wrapper.py:709       ] Session output saved to: /tmp/gitlab-reviewer/sessions/MR-1_20260402_175625_0.log | taskName=Task-5
+[2026-04-02 17:57:19.985] [WARNING ] [opencode_wrapper.py:740       ] Opencode returned non-zero exit code -15 but produced output | taskName=Task-5
+[2026-04-02 17:57:19.985] [DEBUG   ] [opencode_wrapper.py:742       ] Opencode stderr: [0m
+> build · big-pickle
+[0m | taskName=Task-5
+[2026-04-02 17:57:19.985] [INFO    ] [logger.py:222                 ] FLOW: review_file_complete | taskName=Task-5 flow_step=review_file_complete flow_file_path=src/example.py flow_review_length=3094 flow_success=True flow_session_file=/tmp/gitlab-reviewer/sessions/MR-1_20260402_175625_0.log flow_opencode_session_id=None
+[2026-04-02 17:57:19.992] [INFO    ] [main.py:217                   ] Step 6: Posting review to MR... | taskName=Task-4
+[2026-04-02 17:57:19.993] [INFO    ] [logger.py:222                 ] FLOW: mock_post_note | taskName=Task-4 flow_step=mock_post_note flow_project_id=1 flow_mr_iid=1 flow_body_preview=## 🤖 Automated Code Review
+
+Reviewed with model: `opencode/big-pickle`
+
+---
+
+**Summary**: 1 files reviewed successfully
+
+### `src/example.py`
+
+# Code Review: `src/example.py`
+
+## Summary
+
+This file co...
+[2026-04-02 17:57:19.994] [INFO    ] [gitlab_client.py:346          ] Mock review saved to: /tmp/gitlab-reviewer/mock_review_1.md | taskName=Task-4
+[2026-04-02 17:57:19.994] [INFO    ] [logger.py:222                 ] FLOW: review_workflow_complete | taskName=Task-4 flow_step=review_workflow_complete flow_project_id=1 flow_mr_iid=1 flow_files_reviewed=1 flow_success=True
+[2026-04-02 17:57:19.999] [INFO    ] [mock_gitlab_server.py:51      ] Webhook accepted: 200 | taskName=None
+[2026-04-02 17:57:20.000] [DEBUG   ] [mock_gitlab_server.py:52      ] Response: {'status': 'accepted', 'message': 'Review queued for MR !1'} | taskName=None

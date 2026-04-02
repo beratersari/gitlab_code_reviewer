@@ -1,0 +1,15 @@
+# Web Framework
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+
+# HTTP Client
+requests==2.31.0
+
+# GitLab API
+python-gitlab==4.2.0
+
+# Git operations
+GitPython==3.1.40
+
+# Utilities
+python-dotenv==1.0.0
