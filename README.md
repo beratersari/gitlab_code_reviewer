@@ -452,6 +452,7 @@ tail -f logs/app.log
 * Gitlab baglantisi test edilmeli
 * /review ve /ask komutlari eklenmeli. /review'de kullanicinin metni + diffler + codebase + review_system_prompt ele alinmali. /ask'te ise kullanicinin sordugu soru + diffler + codebase + explore_system_prompt ele alinmali
 * parallelik getirilmeli ve max_concurennt job sayisi .env dosyasindan yonetilmeli
+* Detailed code review ve general code review seçenekleri olmalı. Detailed code review diffin bulunduğu tüm kod dosyalarını ayrı ayrı review etmeli
 
 ## License
 
