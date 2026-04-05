@@ -447,6 +447,11 @@ tail -f logs/app.log
 10. Cleanup
     └─ Logs: review_workflow_complete
 ```
+## TO DO
+
+* Gitlab baglantisi test edilmeli
+* /review ve /ask komutlari eklenmeli. /review'de kullanicinin metni + diffler + codebase + review_system_prompt ele alinmali. /ask'te ise kullanicinin sordugu soru + diffler + codebase + explore_system_prompt ele alinmali
+* parallelik getirilmeli ve max_concurennt job sayisi .env dosyasindan yonetilmeli
 
 ## License
 
