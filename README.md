@@ -453,6 +453,7 @@ tail -f logs/app.log
 * /review ve /ask komutlari eklenmeli. /review'de kullanicinin metni + diffler + codebase + review_system_prompt ele alinmali. /ask'te ise kullanicinin sordugu soru + diffler + codebase + explore_system_prompt ele alinmali
 * parallelik getirilmeli ve max_concurennt job sayisi .env dosyasindan yonetilmeli
 * Detailed code review ve general code review seçenekleri olmalı. Detailed code review diffin bulunduğu tüm kod dosyalarını ayrı ayrı review etmeli
+* /review-in-detail komutu olmali sadece bunda tum doyalar ayri ayri taranmali. Ayri ayri tarama isini de paralel bir sekilde yapmali
 
 ## License
 
